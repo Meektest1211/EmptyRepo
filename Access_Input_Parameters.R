@@ -1,6 +1,0 @@
-Sys.getenv('Project_Level_Normal')
-Sys.getenv('Project_Level_Secure')
-Sys.getenv('Template_Level_Normal')
-Sys.getenv('Template_Level_Secure')
-Sys.getenv('User_Level_Normal')
-Sys.getenv('User_Level_Secure')
