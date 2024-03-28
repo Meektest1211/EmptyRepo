@@ -54,7 +54,7 @@ project_name = yaml.safe_load(open("feature_store.yaml"))["project"]
 # OLIST_CUSTOMERS data source
 olist_customers_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="OLIST_CUSTOMERS"
@@ -78,7 +78,7 @@ olist_customers_fv = FeatureView(
 # OLIST_GEOLOCATION data source
 geolocation_stats_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="OLIST_GEOLOCATION"
