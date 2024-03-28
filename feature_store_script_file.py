@@ -102,7 +102,7 @@ geolocation_fv = FeatureView(
 # OLIST_ORDER_ITEMS data source
 order_items_stats_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="OLIST_ORDER_ITEMS"
@@ -130,7 +130,7 @@ order_items_fv = FeatureView(
 # OLIST_ORDER_PAYMENTS data source
 order_payments_stats_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="OLIST_ORDER_PAYMENTS"
@@ -155,7 +155,7 @@ order_payments_fv = FeatureView(
 # OLIST_ORDER_REVIEWS data source
 order_reviews_stats_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="OLIST_ORDER_REVIEWS"
@@ -210,7 +210,7 @@ orders_fv = FeatureView(
 # OLIST_PRODUCTS data source
 products_stats_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="OLIST_PRODUCTS"
@@ -238,7 +238,7 @@ products_fv = FeatureView(
 # OLIST_SELLERS data source
 sellers_stats_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="OLIST_SELLERS"
@@ -247,7 +247,7 @@ sellers_stats_source = SnowflakeSource(
 # PRODUCT_CATEGORY_NAMES_TRANSLATION
 product_category_stats_source = SnowflakeSource(
     database=yaml.safe_load(open("feature_store.yaml"))["offline_store"]["database"],
-    schema="SALES",
+    schema="PUBLIC",
     timestamp_field="EVENT_TIMESTAMP",
     created_timestamp_column="CREATED_TIMESTAMP",
     table="PRODUCT_CATEGORY_NAMES_TRANSLATION"
